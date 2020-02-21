@@ -23,7 +23,7 @@ of movie information.
 If you don't have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
 
 ### 2. Get APIKey to use TheMovieDB API
-You need to get authentication key that will authorize you to request for information on a movie.
+You need to get the authentication key that will authorize you to request for information on a movie.
 1. Go to [APIKey Link](https://developers.themoviedb.org/3/getting-started/introduction) .
 2. Click `Create` or `click here` under **Request an API Key**.
 3. Copy the generated API under **API Key (v3 auth)**.
