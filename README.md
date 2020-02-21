@@ -13,7 +13,7 @@ Starter for REST API workshop that show how to start working on REST APIs using 
   
 
 # First Activity
-### Activity Goal
+## Activity Goal
 In this activity you will learn how to use the first REST API call method **GET**. 
 You will call [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction) public API to retrieve list 
 of movies information. 
@@ -22,17 +22,17 @@ In [First Activity](#first-activity) you learned how to response to the user for
 return the same response. What if the user ask you to answer based on some input that are provided in the request? which
 means the response will be different for each request. 
 -->
-### PreActivity Steps
-#### 1. Sign up on TheMovieDB
+## PreActivity Steps
+### 1. Sign up on TheMovieDB
 If you do not already have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
 
-#### 2. Get APIKey to use TheMovieDB API
+### 2. Get APIKey to use TheMovieDB API
 You need to get authentication key that will authorized you to request for a movies information.
 1. Go to [APIKey Link](https://developers.themoviedb.org/3/getting-started/introduction) .
 2. Click `Create` or `click here` under **Request an API Key**.
 3. Copy the generated API under **API Key (v3 auth)**.
 
-### Activity Steps
+## Activity Steps
 1. Open the starter project in any editor.
 2. Using editor, open **home.js** file under **api/client/public/js** directory.
 3. Add the code of REST API call:
@@ -120,13 +120,13 @@ You need to get authentication key that will authorized you to request for a mov
 
 
 # Second Activity
-### Activity Goal
+## Activity Goal
 In this activity you will learn how to use cloud services REST API and how to exchange data with other applications.
 You need to ask the user to talk about his/her week in English, then you will send the user text to *IBM Tone Analyzer* 
 REST API to extract their feeling then you'll suggest list of movies based on their analyzed mood.
 
-### PreActivity Steps
-#### 1. Initialize your server using NodeJs
+## PreActivity Steps
+### 1. Initialize your server using NodeJs
 1. Downloads [Nodejs](https://nodejs.org/en/)
 2. Open new terminal window and navigate to *api/server* directory. 
     * Install dependencies by run the command `npm install`
@@ -134,10 +134,10 @@ REST API to extract their feeling then you'll suggest list of movies based on th
     * On your browser open the page `http://localhost:8080` you should see -Cannot GET /-, at this point you created 
     a server on your machine that listen to port 8080.
   
-#### 2. Sign up on IBM Cloud
+### 2. Sign up on IBM Cloud
 If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https://cloud.ibm.com/registration).
 
-#### 3. Create watson tone analyzer service with IBM Cloud
+### 3. Create watson tone analyzer service with IBM Cloud
 1. Log into [IBM Cloud](https://cloud.ibm.com/login) with your account.
 2. Create `Tone Analyzer` service.
     - From the top bar menu, click `Catalog`.
@@ -148,8 +148,8 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 3. Once the service is created, go into the service and select `Service credentials` on the left menu,.
 4. Click `View credentials` and copy your `apikey` value.
 
-#### Activity steps 
-##### Integrate with IBM Tone Analyzer API
+## Activity steps 
+### Integrate with IBM Tone Analyzer API
 1. Using editor open **server.js** file under **api/server/server.js** directory.
 2. After the green _Routes Definitions_ comment write the following code that will listen for any request to the URL 
 -http://localhost:8080/api/tone-analyzer- and *POST* HTTP method:
@@ -207,7 +207,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
         npm start 
     ```
       
-##### Build The Movie Recommender Application
+### Build The Movie Recommender Application
 Now you have two APIs that returns useful data, lets build the right logic on those data to get what we want.
 1. Using editor, open **home.js** file under **api/client/public/js** directory.
 <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
