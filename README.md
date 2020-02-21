@@ -49,7 +49,7 @@ You need to get the authentication key that will authorize you to request for in
             });
         ```
     3. Add values to each parameter to let *TheMovieDB* REST API know what do you want:
-         * Since we need to ask the REST API to give us information which means we will only read the data, then the 
+        * Since we need to ask the REST API to give us information which means we will only read the data, then the 
          correct HTTP Method is **GET**. 
             ```javascript
                 type: 'GET',
@@ -60,7 +60,8 @@ You need to get the authentication key that will authorize you to request for in
             ```
          * Go to [TheMovieDB REST API documentation](https://developers.themoviedb.org/3/discover/movie-discover) to 
          know what is the exact **URL** that can answer with the list of movies.
-         URL will be something similar to the below url. **Replace < YOUR-API-KEY > with the APIKey you generated in 
+         URL will be something similar to the below url.
+         > **Replace < YOUR-API-KEY > with the APIKey you generated in 
          [PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
             ```     
                 url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
