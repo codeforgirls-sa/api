@@ -220,7 +220,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 1. The user send a paragraph to the application.
 2. The application uses the Watson Tone Analyzer service to analyze user mood.
 3. The Watson Tone Analyzer service response with the analysis.
-4. The application request from the movie DB a specific movies genders based on watson analysis.
+4. The application request from the movie DB a specific movies geners based on watson analysis.
 5. The movie DB response with a list of movies. 
 6. The application response to the user with recommended movies.
 
