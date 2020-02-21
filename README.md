@@ -212,10 +212,10 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
         npm start 
     ```
       
-## Third Activity
+# Third Activity
 Now you have two APIs that returns useful data, lets build the right logic using those data to get what we want.
 
-### Flow
+## Flow
 ![Picture1](https://user-images.githubusercontent.com/42312407/75001669-12b44e00-5473-11ea-8868-bade7f230a21.png)
 
 1. The user send a paragraph to the application.
@@ -225,7 +225,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 5. The movie DB response with a list of movies. 
 6. The application response to the user with recommended movies.
 
-### Third Steps
+## Activity Steps
 1. Using editor, open **home.js** file under `api/client/public/js` directory.
 <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
 
