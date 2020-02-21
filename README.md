@@ -215,7 +215,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 Now you have two APIs that returns useful data, lets build the right logic using those data to get what we want.
 
 ### Flow
-![Picture1](https://user-images.githubusercontent.com/42312407/75001559-cf59df80-5472-11ea-8283-8f0450e2ca4d.png)
+![Picture1](https://user-images.githubusercontent.com/42312407/75001669-12b44e00-5473-11ea-8868-bade7f230a21.png)
 
 1. The user send a paragraph to the application.
 2. The application uses the Watson Tone Analyzer service to analyze user mood.
