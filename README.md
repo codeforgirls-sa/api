@@ -1,9 +1,12 @@
 # api
 Starter for REST API workshop that shows how to start working on REST APIs using Nodejs and Express.
 
+- - - -  
+
 # Requirements
 * Node.js
 
+- - - -  
 
 # Usage
 1. Click `Clone or download` button. Then, ` Download ZIP`.
