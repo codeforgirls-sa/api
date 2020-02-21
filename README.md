@@ -8,7 +8,7 @@ Starter for REST API workshop that shows how to start working on REST APIs using
 # Usage
 1. Click `Clone` or `download` button. Then, Download ZIP.
 <img width="463" alt="download api starter" src="https://user-images.githubusercontent.com/42312407/74997715-e515d780-5467-11ea-8348-6103db4d43f2.png">
-2. Right click on the downloaded .zip folder and click *Extract All*.
+2. Right click on the downloaded .zip folder and click `Extract All`.
 
   
 
@@ -30,9 +30,9 @@ You need to get the authentication key that will authorize you to request for in
 
 ## Activity Steps
 1. `Open` the starter project in any editor.
-2. Using editor, `open` **home.js** file under ``api/client/public/js`` directory.
+2. Using editor, `open` **home.js** file under `api/client/public/js` directory.
 3. Add the code of REST API call:
-    1. After `$("#ready").hide();`, create empty AJAX method that will make the HTTP call and receive the movies 
+    1. After ```$("#ready").hide();```, create empty AJAX method that will make the HTTP call and receive the movies 
     information 
          ```
             $.ajax({ });
@@ -65,8 +65,8 @@ You need to get the authentication key that will authorize you to request for in
             ```     
                 url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
             ```
-         * Now the only o8 left is **success** section, incase the call is succeed and return **200 OK** status the 
-         *function(data){}* will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
+         * Now the only left one is **success** section, incase the call is succeed and return **200 OK** status the 
+         ```function(data){}``` will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
          which is the *The list of movies information*.
          What we will do is basically iterate through the first 8 elements in the list and add their posters and titles 
          to our HTML page.
@@ -108,8 +108,8 @@ You need to get the authentication key that will authorize you to request for in
                              }
                 });
             ```
-4. Save your changes to **home.js** file.
-5. Using **Google Chrome**, open *home.html* on `api/views`.
+4. `Save` your changes to **home.js** file.
+5. Using **Google Chrome**, `open` **home.html** on `api/views`.
 6. Wahoo 🎉🎉, congratulations you just created your first REST API call. 
     * *home.html* page will be look like this:
     
@@ -128,10 +128,10 @@ For this activity, you need to ask the user to talk about his/her week in Englis
 ## PreActivity Steps
 ### 1. Initialize your server using NodeJs
 1. Downloads [Nodejs](https://nodejs.org/en/)
-2. Open new terminal window and navigate to `api/server` directory. 
+2. `Open` new terminal window and navigate to `api/server` directory. 
     * Install dependencies by run the command `npm install`
     * Run the server using the command `npm start`
-    * On your browser open the page `http://localhost:8080` you should see -Cannot GET /-, at this point you created 
+    * On your browser `open` the page `http://localhost:8080` you should see `Cannot GET /`, at this point you created 
     a server on your machine that listen to port 8080.
   
 ### 2. Sign up on IBM Cloud
@@ -146,11 +146,11 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
     - Choose `Lite` plane.
     - Click `Create`.
 3. Once the service is created, go into the service and select `Service credentials` on the left menu,.
-4. Click `View credentials` and copy your `apikey` value.
+4. Click `View credentials` and copy your **apikey** value.
 
 ## Activity steps 
 ### Integrate with IBM Tone Analyzer API
-1. Using editor open **server.js** file under `api/server/server.js` directory.
+1. Using editor `open` **server.js** file under `api/server/server.js` directory.
 2. After the green _Routes Definitions_ comment write the following code that will listen for any request to the URL 
 -http://localhost:8080/api/tone-analyzer- and *POST* HTTP method:
     ```
@@ -192,16 +192,16 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
                         console.log('error:', err);
                   });  
        ```  
-          1. *params* --> is a Json variable that contains two values: 
-                * *toneInput* --> is a Json variable contains *text = user input* that will be sent to 
+          1. *params*: is a Json variable that contains two values: 
+                * *toneInput*: is a Json variable contains *text = user input* that will be sent to 
                 *IBM Tone Analyzer* REST API
-                * *contentType* --> specify the format of *toneInput*
-          2. *toneAnalyzer.tone(params)* --> is the actual call to *IBM Tone Analyzer* REST API
-          3. *.then()* --> is the method that will be executed if *IBM Tone Analyzer* REST API return **200 OK** status
-                * *toneAnalysis* --> contains the analyzed feeling based on the text we already sent
-                * *res.json({value: toneAnalysis.result.document_tone.tones});* --> is your server response to the one 
+                * *contentType*: specify the format of *toneInput*
+          2. *toneAnalyzer.tone(params)*: is the actual call to *IBM Tone Analyzer* REST API
+          3. *.then()*: is the method that will be executed if *IBM Tone Analyzer* REST API return **200 OK** status
+                * *toneAnalysis*: contains the analyzed feeling based on the text we already sent
+                * *res.json({value: toneAnalysis.result.document_tone.tones});*: is your server response to the one 
                 who request a call to the URL: -http://localhost:8080/api/tone-analyzer-
-          4. *.catch()* --> is the method that will be executed if *IBM Tone Analyzer* REST API call failed
+          4. *.catch()*: is the method that will be executed if *IBM Tone Analyzer* REST API call failed
 5. Rerun your server to reflect all changes you made
     ``` 
         npm start 
@@ -221,17 +221,17 @@ Now you have two APIs that returns useful data, lets build the right logic using
 6. The application response to the user with recommended movies.
 
 ## Activity Steps
-1. Using editor, open **home.js** file under `api/client/public/js` directory.
+1. Using editor, `open` **home.js** file under `api/client/public/js` directory.
     <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
 
 2. Add event listener that will be triggered when a user press *submit* button 
-    1. *At the first line* in the file add the code:
+    1. **At the first line** in the file add the code:
         ```
            $("#get-mood-form").submit(event => {
                // prevent loading the page
                event.preventDefault();
         ```
-    2. *At the last line* in the file add the closing brackets:
+    2. **At the last line** in the file add the closing brackets:
         ```
             });
         ```
@@ -350,9 +350,9 @@ Now you have two APIs that returns useful data, lets build the right logic using
              }
            ```   
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
-    * Once installed, click it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
+    * Once installed, `click` it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
 
-5. Using **Google Chrome**, open *home.html* on `api/views` and start testing your amazing app.
+5. Using **Google Chrome**, open **home.html** on `api/views` and start testing your amazing app.
     * Make sure that your [server](#Integrate-with-IBM-Tone-Analyzer-API) still running and listening to port 8080
 # Awesome job 🎉🎉. 
 ![giphy](https://user-images.githubusercontent.com/42312407/75002304-fb766000-5474-11ea-89e6-9e02cf15c10c.gif)
