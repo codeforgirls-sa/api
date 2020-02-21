@@ -211,8 +211,20 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
         npm start 
     ```
       
-### Build The Movie Recommender Application
-Now you have two APIs that returns useful data, lets build the right logic on those data to get what we want.
+## Third Activity
+Now you have two APIs that returns useful data, lets build the right logic using those data to get what we want.
+
+### Flow
+![Picture1](https://user-images.githubusercontent.com/42312407/75000781-68d3c200-5470-11ea-9e58-27b8d59849b2.png)
+
+1. The user send a paragraph to the application.
+2. The application uses the Watson Tone Analyzer service to analyze user mood.
+3. The Watson Tone Analyzer service response with the analysis.
+4. The application request from the movie DB a specific movies genders based on watson analysis.
+5. The movie DB response with a list of movies. 
+6. The application response to the user with recommended movies.
+
+### Third Steps
 1. Using editor, open **home.js** file under **api/client/public/js** directory.
 <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
 
@@ -231,9 +243,7 @@ Now you have two APIs that returns useful data, lets build the right logic on th
         <img width="600" alt="Home.js" src="https://user-images.githubusercontent.com/42312407/74997337-e72b6680-5466-11ea-91a5-934c9957cc7f.png">
 
 3. Add another AJAX method that will call Tone Analyzer REST API you just created. 
-The logic is taking the user input, then calling Tone Analyzer REST API and get the user mood. After that we will choose 
-the right movies genres based on the user mood, then we will call TheMovieDB REST API to give the user a list of 
-recommended movies- 
+
     1. Create empty AJAX method:
         ```
             // request Tone Analyzer
@@ -341,6 +351,10 @@ recommended movies-
                          movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
              }
         ```   
-4. Using **Google Chrome**, open *home.html* on **api/views** and start testing you amazing app.
+4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
+    * Once installed, click it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. https://miro.medium.com/max/82/1*BRalozwvBaJG70Dr5s8S9g.png
+
+
+5. Using **Google Chrome**, open *home.html* on **api/views** and start testing you amazing app.
     * Make sure that your [server](5-Rerun-your-server-to-reflect-all-changes-you-made) still running and listening to port 8080
-5. Awesome job ![You did it]() 
+6. Awesome job ![You did it]() 
