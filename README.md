@@ -209,7 +209,8 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 ##### Build The Movie Recommender Application
 Now you have two APIs that returns useful data, lets build the right logic on those data to get what we want.
 1. Using editor, open **home.js** file under **api/client/public/js** directory.
-![home.js File]()
+<img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
+
 2. Add event listener that will be triggered when a user press *submit* button 
     1. *At the first line* in the file add the code:
         ```
