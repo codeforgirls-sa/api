@@ -20,7 +20,7 @@ of movie information.
 
 ## PreActivity Steps
 ### 1. Sign up on TheMovieDB
-If you don't already have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
+If you don't have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
 
 ### 2. Get APIKey to use TheMovieDB API
 You need to get authentication key that will authorize you to request for information on a movie.
