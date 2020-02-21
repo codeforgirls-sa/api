@@ -12,7 +12,10 @@ Starter for REST API workshop that shows how to start working on REST APIs using
 
 - - - -  
 
-# First Activity
+<details>
+<summary># First Activity</summary>
+
+
 ## Activity Goal
 In this activity you will learn how to use the first REST API call method **GET**. 
 You will call [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction) public API to retrieve the list 
@@ -116,6 +119,8 @@ You need to get the authentication key that will authorize you to request for in
     
     <img width="1674" alt="Screen Shot 2020-02-21 at 12 42 30 AM" src="https://user-images.githubusercontent.com/42312407/74998776-acc3c880-546a-11ea-9a75-d4697dd1c5e7.png">
 
+
+</details>
 
 
 - - - -
