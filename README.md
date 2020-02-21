@@ -1,0 +1,339 @@
+# api
+Starter for REST API workshop that show how to start working on REST APIs using Nodejs and Express.
+
+# Requirements
+* Node.js
+
+
+# Usage
+1. Click Clone or download button. Then, Download ZIP.
+2. Right click on the downloaded .zip folder and click Extract All.
+
+  
+
+# First Activity
+### Activity Goal
+In this activity you will learn how to use the first REST API call method **GET**. 
+You will call [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction) public API to retrieve list 
+of movies information. 
+<!--
+In [First Activity](#first-activity) you learned how to response to the user for a simple request all the requests will 
+return the same response. What if the user ask you to answer based on some input that are provided in the request? which
+means the response will be different for each request. 
+-->
+### PreActivity Steps
+#### 1. Sign up on TheMovieDB
+If you do not already have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
+
+#### 2. Get APIKey to use TheMovieDB API
+You need to get authentication key that will authorized you to request for a movies information.
+1. Go to [APIKey Link](https://developers.themoviedb.org/3/getting-started/introduction) .
+2. Click `Create` or `click here` under **Request an API Key**.
+3. Copy the generated API under **API Key (v3 auth)**.
+
+### Activity Steps
+1. Open the starter project in any editor.
+2. Using editor, open **home.js** file under **api/client/public/js** directory.
+3. Add the code of REST API call:
+    1. After **$("#ready").hide();**, create empty AJAX method that will make the HTTP call and receive the movies 
+    information 
+         ```
+            $.ajax({ });
+         ```
+    2. Inside the AJAx method, add required parameters that will be used to make the REST API call. The AJAX method must
+     be look like this
+         ```
+            // request Movies
+            $.ajax({
+                url:   ,
+                type:  ,
+                contentType:  ,
+                success: function(data) { }
+            });
+        ```
+    3. Add values to each parameter to let *TheMovieDB* REST API know what do you want:
+         * Since we need to ask the REST API to give us information which means we will only read the data, then the 
+         correct HTTP Method is **GET**. 
+            ```
+                type: 'GET',
+            ```
+         * We need to ask *TheMovieDB* REST API to give us the data as **Json**
+            ```$xslt
+                contentType: "application/json",
+            ```
+         * Go to [TheMovieDB REST API documentation](https://developers.themoviedb.org/3/discover/movie-discover) to 
+         know what is the exact **URL** that can answer with the list of movies.
+         URL will be something similar to the below url. **Replace  <YOUR-API-KEY> with the APIKey you generated in 
+         [PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
+            ```     
+                url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
+            ```
+         * Now the only one left is **success** section, incase the call is succeed and return **200 OK** status the 
+         function(data){} will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
+         which is the *The list of movies information*.
+         What we will do is basically iterate through the first 8 elements in the list and add their posters and titles 
+         to our HTML page.
+            ``` 
+                success: function (data) {
+                            var counter = 0;
+                            data.results.forEach(m => {
+                                if (m.poster_path !== null && counter < 8) {
+                                    counter++;
+                                    $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
+                                        'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
+                                        ' width' + '=' + '150' + '></div>');
+                                }
+                            });
+                            $("#ready").show();
+                            $("#loading").hide();
+                         }
+            ```
+           
+         * Your AJAX method must be look similar to the following method:
+            ```          
+                // request Movies
+                $.ajax({
+                    url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
+                    type: 'GET',
+                    contentType: "application/json",
+                    success: function (data) {
+                                var counter = 0;
+                                data.results.forEach(m => {
+                                    if (m.poster_path !== null && counter < 8) {
+                                        counter++;
+                                        $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
+                                            'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
+                                            ' width' + '=' + '150' + '></div>');
+                                    }
+                                });
+                                $("#ready").show();
+                                $("#loading").hide();
+                             }
+                });
+            ```
+4. Save your changes to **home.js** file.
+5. Using **Google Chrome**, open *home.html* on **api/views**.
+6. Wahoo 🎉🎉, congratulations you just create your first REST API call. 
+    * *home.html* page will be look like this:
+    ![Home Page](url)
+
+
+# Second Activity
+### Activity Goal
+In this activity you will learn how to use cloud services REST API and how to exchange data with other applications.
+You need to ask the user to talk about his/her week in English, then you will send the user text to *IBM Tone Analyzer* 
+REST API to extract their feeling then you'll suggest list of movies based on their analyzed mood.
+
+### PreActivity Steps
+#### 1. Initialize your server using NodeJs
+1. Downloads [Nodejs](https://nodejs.org/en/)
+2. Open new terminal window and navigate to *api/server* directory. 
+    * Install dependencies by run the command `npm install`
+    * Run the server using the command `npm start`
+    * On your browser open the page `http://localhost:8080` you should see -Cannot GET /-, at this point you created 
+    a server on your machine that listen to port 8080.
+  
+#### 2. Sign up on IBM Cloud
+If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https://cloud.ibm.com/registration).
+
+#### 3. Create watson tone analyzer service with IBM Cloud
+1. Log into [IBM Cloud](https://cloud.ibm.com/login) with your account.
+2. Create `Tone Analyzer` service.
+    - From the top bar menu, click `Catalog`.
+    - On the left menu, select `AI`.
+    - Select `Tone Analyzer`.
+    - Choose `Lite` plane.
+    - Click `Create`.
+3. Once the service is created, go into the service and select `Service credentials` on the left menu,.
+4. Click `View credentials` and copy your `apikey` value.
+
+#### Activity steps 
+##### Integrate with IBM Tone Analyzer API
+1. Using editor open **server.js** file under **api/server/server.js** directory.
+2. After the green _Routes Definitions_ comment write the following code that will listen for any request to the URL 
+-http://localhost:8080/api/tone-analyzer- and *POST* HTTP method:
+    ```
+        server.post("/api/tone-analyzer", (req, res) => { });
+    ```
+3. Save the user's text into -query- variable that your server on your machine will receive on port 8080. 
+    ```
+        let query = JSON.stringify(req.body.query) || "-1";
+    ```
+4. Inside *POST* listener you will create REST API call as *IBM Tone Analyzer* API 
+[documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
+    * Copy the first code on the left and replace some values as below,
+     **Replace  <YOUR-API-KEY> with the APIKey you generated in 
+             [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
+        ```
+            const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
+            const { IamAuthenticator } = require('ibm-watson/auth');
+            
+            const toneAnalyzer = new ToneAnalyzerV3({
+              version: '2017-09-21',
+              authenticator: new IamAuthenticator({
+                apikey: '<YOUR-API-KEY>',
+              }),
+              url: 'https://api.eu-gb.tone-analyzer.watson.cloud.ibm.com',
+            });
+        ```
+     * Write the REST API call that will return the user feeling
+        ```
+             const params = {
+                  toneInput: { 'text': query },
+                  contentType: 'application/json',
+             };
+       
+             toneAnalyzer.tone(params)
+                  .then(toneAnalysis => {
+                        res.json({value: toneAnalysis.result.document_tone.tones});
+                  })
+                  .catch(err => {
+                        console.log('error:', err);
+                  });  
+       ```  
+          1. *params* --> is a Json variable that contains two values: 
+                * -toneInput- --> is a Json variable that contains -text = user input- that will be sent to 
+                *IBM Tone Analyzer* REST API
+                * -contentType- --> specify the format of -toneInput-
+          2. *toneAnalyzer.tone(params)* --> is the actual call to *IBM Tone Analyzer* REST API
+          3. *.then()* --> is the method that will be executed if *IBM Tone Analyzer* REST API return **200 OK** status
+                * *toneAnalysis* --> contains the analyzed feeling based on the text we already sent
+                * *res.json({value: toneAnalysis.result.document_tone.tones});* --> is your server response to the one 
+                who request a call to the URL: -http://localhost:8080/api/tone-analyzer-
+          4. *.catch()* --> is the method that will be executed if *IBM Tone Analyzer* REST API call failed
+5. Rerun your server to reflect all changes you made
+    ``` 
+        npm start 
+    ```
+      
+##### Build The Movie Recommender Application
+Now you have two APIs that returns useful data, lets build the right logic on those data to get what we want.
+1. Using editor, open **home.js** file under **api/client/public/js** directory.
+![home.js File]()
+2. Add event listener that will be triggered when a user press *submit* button 
+    1. *At the first line* in the file add the code:
+        ```
+           $("#get-mood-form").submit(event => {
+               // prevent loading the page
+               event.preventDefault();
+        ```
+    2. *At the last line* in the file add the closing brackets:
+        ```
+            });
+        ```
+    * *home.js* file must now be look like this:
+        ![Home.js](url)
+3. Add another AJAX method that will call Tone Analyzer REST API you just created
+-The logic is taking the user input, then calling Tone Analyzer REST API and get the user mood. After that we will choose 
+the right movies genres based on the user mood, then we will call TheMovieDB REST API to give the user a list of 
+recommended movies- 
+    1. Create empty AJAX method:
+        ```
+            // request Tone Analyzer
+            $.ajax({
+                url:   ,
+                type:  ,
+                contentType:  ,
+                success: function(data) { }
+            });
+        ```
+    2. Move the old AJAx method that call *TheMovieDB REST API* inside  -function(data) { }- and replace the URL with 
+    ```url``` variable to request dynamic value. 
+        ```
+            // request Tone Analyzer
+            $.ajax({
+                 url:   ,
+                 type:  ,
+                 contentType:  ,
+                 success: function(data) { 
+                            
+                            // request Movies
+                            $.ajax({
+                            url: movieUrl,
+                            type: 'GET',
+                            contentType: "application/json",
+                            json: true,
+                            success: function (data) {
+                                        var counter = 0;
+                                        data.results.forEach(m => {
+                                              if (m.poster_path !== null && counter < 8) {
+                                              counter++;
+                                              $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
+                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
+                                                    ' width' + '=' + '150' + '></div>');
+                                              }
+                                        });
+                                        $("#ready").show();
+                                        $("#loading").hide();
+                                     }
+                            });
+                          }
+            });
+        ```
+    3. Add values to the rest parameters as:
+        ```
+            $.ajax({
+                 url: "http://localhost:8080/api/tone-analyzer",
+                 type: "post",
+                 data: JSON.stringify(query),
+                 success: function(data) { 
+                                        
+                            // request Movies
+                            $.ajax({
+                            url: movieUrl,
+                            type: 'GET',
+                            contentType: "application/json",
+                            json: true,
+                            success: function (data) {
+                                        var counter = 0;
+                                        data.results.forEach(m => {
+                                              if (m.poster_path !== null && counter < 8) {
+                                              counter++;
+                                              $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
+                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
+                                                    ' width' + '=' + '150' + '></div>');
+                                              }
+                                        });
+                                        $("#ready").show();
+                                        $("#loading").hide();
+                                     }
+                            });
+                          }
+            });
+
+        ```
+    4. Initialize TheMovieDB REST API URL based on user mood by adding the following code before TheMovieDB call
+    **Replace <YOUR-API-KEY> in each url with the APIKey you generated in 
+    [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
+        ```
+             Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
+            
+             switch (largestTone) {
+                   case 'anger':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   case 'fear':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   case 'joy':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   case 'sadness':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   case 'analytical':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   case 'confident':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         reak;
+                   case 'tentative':
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+                         break;
+                   default:
+                         movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
+             }
+        ```   
+4. Using **Google Chrome**, open *home.html* on **api/views** and start testing you amazing app.
+    * Make sure that your [server](5-Rerun-your-server-to-reflect-all-changes-you-made) still running and listening to port 8080
+5. Awesome job ![You did it]() 
