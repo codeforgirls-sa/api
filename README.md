@@ -34,12 +34,12 @@ You need to get the authentication key that will authorize you to request for in
 3. Add the code of REST API call:
     1. After ```$("#ready").hide();```, create empty AJAX method that will make the HTTP call and receive the movies 
     information 
-         ```
+         ```javascript
             $.ajax({ });
          ```
     2. Inside the AJAx method, add required parameters that will be used to make the REST API call. The AJAX method must
      be look like this
-         ```
+         ```javascript
             // request Movies
             $.ajax({
                 url:   ,
@@ -51,11 +51,11 @@ You need to get the authentication key that will authorize you to request for in
     3. Add values to each parameter to let *TheMovieDB* REST API know what do you want:
          * Since we need to ask the REST API to give us information which means we will only read the data, then the 
          correct HTTP Method is **GET**. 
-            ```
+            ```javascript
                 type: 'GET',
             ```
          * We need to ask *TheMovieDB* REST API to give us the data as **Json**
-            ```$xslt
+            ```javascript
                 contentType: "application/json",
             ```
          * Go to [TheMovieDB REST API documentation](https://developers.themoviedb.org/3/discover/movie-discover) to 
@@ -70,7 +70,7 @@ You need to get the authentication key that will authorize you to request for in
          which is the *The list of movies information*.
          What we will do is basically iterate through the first 8 elements in the list and add their posters and titles 
          to our HTML page.
-            ``` 
+            ```javascript 
                 success: function (data) {
                             var counter = 0;
                             data.results.forEach(m => {
@@ -87,7 +87,7 @@ You need to get the authentication key that will authorize you to request for in
             ```
            
          * Your AJAX method must be look similar to the following method:
-            ```          
+            ```javascript          
                 // request Movies
                 $.ajax({
                     url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
@@ -153,11 +153,11 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 1. Using editor `open` **server.js** file under `api/server/server.js` directory.
 2. After the green _Routes Definitions_ comment write the following code that will listen for any request to the URL 
 -http://localhost:8080/api/tone-analyzer- and *POST* HTTP method:
-    ```
+    ```javascript
         server.post("/api/tone-analyzer", (req, res) => { });
     ```
 3. Save the user's text into `query` variable that your server on your machine will receive on port 8080. 
-    ```
+    ```javascript
         let query = JSON.stringify(req.body.query) || "-1";
     ```
 4. Inside **POST** listener you will create REST API call as *IBM Tone Analyzer* API 
@@ -165,7 +165,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
     * Copy the first code on the left and replace some values as below,
      **Replace  < YOUR-API-KEY > with the APIKey you generated in 
              [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
-        ```
+        ```javascript
             const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
             const { IamAuthenticator } = require('ibm-watson/auth');
             
@@ -178,7 +178,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
             });
         ```
      * Write the REST API call that will return the user feeling
-        ```
+        ```javascript
              const params = {
                   toneInput: { 'text': query },
                   contentType: 'application/json',
@@ -226,13 +226,13 @@ Now you have two APIs that returns useful data, lets build the right logic using
 
 2. Add event listener that will be triggered when a user press `submit` button 
     1. **At the first line** in the file add the code:
-        ```
+        ```javascript
            $("#get-mood-form").submit(event => {
                // prevent loading the page
                event.preventDefault();
         ```
     2. **At the last line** in the file add the closing brackets:
-        ```
+        ```javascript
             });
         ```
     * *home.js* file now must be look like this:
@@ -241,7 +241,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 3. Add another AJAX method that will call Tone Analyzer REST API you just created. 
 
     1. Create empty AJAX method:
-        ```
+        ```javascript
             // request Tone Analyzer
             $.ajax({
                 url:   ,
@@ -253,7 +253,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
     2. Move the old AJAx method that call *TheMovieDB REST API* inside  `function(data) { }` and replace the URL with 
     ```url``` variable to request dynamic value.
     
-        ```
+        ```javascript
             // request Tone Analyzer
             $.ajax({
                  url:   ,
@@ -285,7 +285,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     3. Add values to the rest parameters as:
-        ```
+        ```javascript
             $.ajax({
                  url: "http://localhost:8080/api/tone-analyzer",
                  type: "post",
@@ -320,7 +320,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
       
           **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
         
-          ```
+          ```javascript
              Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
             
              switch (largestTone) {
