@@ -70,7 +70,7 @@ You need to get authentication key that will authorized you to request for a mov
                 url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
             ```
          * Now the only one left is **success** section, incase the call is succeed and return **200 OK** status the 
-         function(data){} will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
+         -function(data){}- will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
          which is the *The list of movies information*.
          What we will do is basically iterate through the first 8 elements in the list and add their posters and titles 
          to our HTML page.
