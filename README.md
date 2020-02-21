@@ -121,6 +121,9 @@ You need to get the authentication key that will authorize you to request for in
 - - - -
 
 
+
+
+
 # Second Activity
 ## Activity Goal
 In this activity you will learn how to use cloud services REST API and how to exchange data with other applications.
