@@ -197,7 +197,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
                   });  
        ```  
           1. *params* --> is a Json variable that contains two values: 
-                * *toneInput* --> is a Json variable that contains -text = user input- that will be sent to 
+                * *toneInput* --> is a Json variable contains *text = user input* that will be sent to 
                 *IBM Tone Analyzer* REST API
                 * *contentType* --> specify the format of -toneInput-
           2. *toneAnalyzer.tone(params)* --> is the actual call to *IBM Tone Analyzer* REST API
