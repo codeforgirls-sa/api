@@ -323,7 +323,8 @@ Now you have two APIs that returns useful data, lets build the right logic using
     4. Initialize TheMovieDB REST API URL based on user mood by adding the following code before TheMovieDB call.
       
       **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
-        ```
+        
+      ```
              Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
             
              switch (largestTone) {
