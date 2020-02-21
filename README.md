@@ -221,8 +221,9 @@ Now you have two APIs that returns useful data, lets build the right logic on th
         ```
             });
         ```
-    * *home.js* file must now be look like this:
-        ![Home.js](url)
+    * *home.js* file now must be look like this:
+        <img width="300" alt="Home.js" src="https://user-images.githubusercontent.com/42312407/74997337-e72b6680-5466-11ea-91a5-934c9957cc7f.png">
+
 3. Add another AJAX method that will call Tone Analyzer REST API you just created
 -The logic is taking the user input, then calling Tone Analyzer REST API and get the user mood. After that we will choose 
 the right movies genres based on the user mood, then we will call TheMovieDB REST API to give the user a list of 
