@@ -10,7 +10,7 @@ Starter for REST API workshop that shows how to start working on REST APIs using
     <img width="463" alt="download api starter" src="https://user-images.githubusercontent.com/42312407/74997715-e515d780-5467-11ea-8348-6103db4d43f2.png">
 2. Right click on the downloaded `.zip` folder and click `Extract All`.
 
-  
+- - - -  
 
 # First Activity
 ## Activity Goal
@@ -117,7 +117,7 @@ You need to get the authentication key that will authorize you to request for in
 
 
 
-
+- - - -
 
 
 # Second Activity
@@ -163,8 +163,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 4. Inside **POST** listener you will create REST API call as *IBM Tone Analyzer* API 
 [documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
     * Copy the first code on the left and replace some values as below,
-     > **Replace  < YOUR-API-KEY > with the APIKey you generated in 
-             [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
+        > **Replace  < YOUR-API-KEY > with the APIKey you generated in [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
         ```javascript
             const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
             const { IamAuthenticator } = require('ibm-watson/auth');
@@ -206,7 +205,10 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
     ``` 
         npm start 
     ```
-      
+
+- - - -
+
+
 # Third Activity
 Now you have two APIs that returns useful data, lets build the right logic using those data to get what we want.
 
