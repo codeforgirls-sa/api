@@ -8,7 +8,7 @@ Starter for REST API workshop that shows how to start working on REST APIs using
 # Usage
 1. Click `Clone` or `download` button. Then, Download ZIP.
 <img width="463" alt="download api starter" src="https://user-images.githubusercontent.com/42312407/74997715-e515d780-5467-11ea-8348-6103db4d43f2.png">
-2. Right click on the downloaded .zip folder and click `Extract All`.
+2. Right click on the downloaded `.zip` folder and click `Extract All`.
 
   
 
@@ -156,11 +156,11 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
     ```
         server.post("/api/tone-analyzer", (req, res) => { });
     ```
-3. Save the user's text into *query* variable that your server on your machine will receive on port 8080. 
+3. Save the user's text into `query` variable that your server on your machine will receive on port 8080. 
     ```
         let query = JSON.stringify(req.body.query) || "-1";
     ```
-4. Inside *POST* listener you will create REST API call as *IBM Tone Analyzer* API 
+4. Inside **POST** listener you will create REST API call as *IBM Tone Analyzer* API 
 [documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
     * Copy the first code on the left and replace some values as below,
      **Replace  < YOUR-API-KEY > with the APIKey you generated in 
@@ -224,7 +224,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 1. Using editor, `open` **home.js** file under `api/client/public/js` directory.
     <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
 
-2. Add event listener that will be triggered when a user press *submit* button 
+2. Add event listener that will be triggered when a user press `submit` button 
     1. **At the first line** in the file add the code:
         ```
            $("#get-mood-form").submit(event => {
@@ -250,7 +250,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
                 success: function(data) { }
             });
         ```
-    2. Move the old AJAx method that call *TheMovieDB REST API* inside  *function(data) { }* and replace the URL with 
+    2. Move the old AJAx method that call *TheMovieDB REST API* inside  `function(data) { }` and replace the URL with 
     ```url``` variable to request dynamic value.
     
         ```
@@ -271,11 +271,11 @@ Now you have two APIs that returns useful data, lets build the right logic using
                                         var counter = 0;
                                         data.results.forEach(m => {
                                               if (m.poster_path !== null && counter < 8) {
-                                              counter++;
-                                              $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
-                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
-                                                    ' width' + '=' + '150' + '></div>');
-                                              }
+                                                  counter++;
+                                                  $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img src=' +
+                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height = 200' +
+                                                    ' width = 150></div>');
+                                               }
                                         });
                                         $("#ready").show();
                                         $("#loading").hide();
@@ -302,11 +302,11 @@ Now you have two APIs that returns useful data, lets build the right logic using
                                         var counter = 0;
                                         data.results.forEach(m => {
                                               if (m.poster_path !== null && counter < 8) {
-                                              counter++;
-                                              $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img' + ' ' + 'src=' +
-                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height' + '=' + '200' +
-                                                    ' width' + '=' + '150' + '></div>');
-                                              }
+                                                  counter++;
+                                                  $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img src=' +
+                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height = 200' +
+                                                    ' width = 150></div>');
+                                               }
                                         });
                                         $("#ready").show();
                                         $("#loading").hide();
@@ -352,7 +352,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
     * Once installed, `click` it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
 
-5. Using **Google Chrome**, open **home.html** on `api/views` and start testing your amazing app.
+5. Using **Google Chrome**, `open` **home.html** on `api/views` and start testing your amazing app.
     * Make sure that your [server](#Integrate-with-IBM-Tone-Analyzer-API) still running and listening to port 8080
 # Awesome job 🎉🎉. 
 ![giphy](https://user-images.githubusercontent.com/42312407/75002304-fb766000-5474-11ea-89e6-9e02cf15c10c.gif)
