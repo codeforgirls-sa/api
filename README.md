@@ -61,10 +61,11 @@ You need to get the authentication key that will authorize you to request for in
          * Go to [TheMovieDB REST API documentation](https://developers.themoviedb.org/3/discover/movie-discover) to 
          know what is the exact **URL** that can answer with the list of movies.
          URL will be something similar to the below url.
-         > **Replace < YOUR-API-KEY > with the APIKey you generated in [PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
-            ```     
-                url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
-            ```
+            > **Replace < YOUR-API-KEY > with the APIKey you generated in [PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)**
+            
+                ```     
+                    url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
+                ```
          * Now the only left one is **success** section, incase the call is succeed and return **200 OK** status the 
          ```function(data){}``` will be called. The parameter **data** is holding the response from *TheMovieDB* REST API 
          which is the *The list of movies information*.
@@ -163,19 +164,20 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 4. Inside **POST** listener you will create REST API call as *IBM Tone Analyzer* API 
 [documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
     * Copy the first code on the left and replace some values as below.
-    > **Replace  < YOUR-API-KEY > with the APIKey you generated in [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
-        ```javascript
-            const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
-            const { IamAuthenticator } = require('ibm-watson/auth');
+        > **Replace  < YOUR-API-KEY > with the APIKey you generated in [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
+        
+            ```javascript
+                const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
+                const { IamAuthenticator } = require('ibm-watson/auth');
             
-            const toneAnalyzer = new ToneAnalyzerV3({
-              version: '2017-09-21',
-              authenticator: new IamAuthenticator({
-                apikey: '<YOUR-API-KEY>',
-              }),
-              url: 'https://api.eu-gb.tone-analyzer.watson.cloud.ibm.com',
-            });
-        ```
+                const toneAnalyzer = new ToneAnalyzerV3({
+                version: '2017-09-21',
+                authenticator: new IamAuthenticator({
+                    apikey: '<YOUR-API-KEY>',
+                }),
+                url: 'https://api.eu-gb.tone-analyzer.watson.cloud.ibm.com',
+                });
+            ```
      * Write the REST API call that will return the user feeling
         ```javascript
              const params = {
@@ -319,7 +321,8 @@ Now you have two APIs that returns useful data, lets build the right logic using
 
         ```
     4. Initialize TheMovieDB REST API URL based on user mood by adding the following code before TheMovieDB call.
-      > **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
+        > **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)**
+        
         
           ```javascript
              Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
