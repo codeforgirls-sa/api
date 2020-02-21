@@ -163,7 +163,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 4. Inside **POST** listener you will create REST API call as *IBM Tone Analyzer* API 
 [documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
     * Copy the first code on the left and replace some values as below,
-     **Replace  < YOUR-API-KEY > with the APIKey you generated in 
+     > **Replace  < YOUR-API-KEY > with the APIKey you generated in 
              [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
         ```javascript
             const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
