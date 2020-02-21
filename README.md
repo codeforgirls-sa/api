@@ -322,9 +322,9 @@ Now you have two APIs that returns useful data, lets build the right logic using
         ```
     4. Initialize TheMovieDB REST API URL based on user mood by adding the following code before TheMovieDB call.
       
-      **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
+          **Replace < YOUR-API-KEY > in each url with the APIKey you generated in [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
         
-      ```
+          ```
              Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
             
              switch (largestTone) {
@@ -352,7 +352,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
                    default:
                          movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53";
              }
-        ```   
+           ```   
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
     * Once installed, click it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. https://miro.medium.com/max/82/1*BRalozwvBaJG70Dr5s8S9g.png
 
