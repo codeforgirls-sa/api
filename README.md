@@ -116,6 +116,7 @@ You need to get authentication key that will authorized you to request for a mov
 5. Using **Google Chrome**, open *home.html* on `api/views`.
 6. Wahoo 🎉🎉, congratulations you just create your first REST API call. 
     * *home.html* page will be look like this:
+    
     <img width="1674" alt="Screen Shot 2020-02-21 at 12 42 30 AM" src="https://user-images.githubusercontent.com/42312407/74998776-acc3c880-546a-11ea-9a75-d4697dd1c5e7.png">
 
 
