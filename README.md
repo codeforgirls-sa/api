@@ -35,7 +35,7 @@ You need to get the authentication key that will authorize you to request for in
 1. `Open` the starter project in any editor.
 2. Using editor, `open` **home.js** file under `api/client/public/js` directory.
 3. Add the code of REST API call:
-    1. After ```$("#ready").hide();```, create empty AJAX method that will make the HTTP call and receive the movies 
+    1. After ```var movieUrl;```, create empty AJAX method that will make the HTTP call and receive the movies 
     information 
          ```javascript
             $.ajax({ });
