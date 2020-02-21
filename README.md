@@ -180,18 +180,18 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
        ```
      * Write the REST API call that will return the user feeling
         ```javascript
-             const params = {
-                  toneInput: { 'text': query },
-                  contentType: 'application/json',
-             };
+           const params = {
+                toneInput: { 'text': query },
+                contentType: 'application/json',
+           };
        
-             toneAnalyzer.tone(params)
-                  .then(toneAnalysis => {
-                        res.json({value: toneAnalysis.result.document_tone.tones});
-                  })
-                  .catch(err => {
-                        console.log('error:', err);
-                  });  
+           toneAnalyzer.tone(params)
+                .then(toneAnalysis => {
+                    res.json({value: toneAnalysis.result.document_tone.tones});
+                })
+                .catch(err => {
+                    console.log('error:', err);
+                });  
        ```  
           1. *params*: is a Json variable that contains two values: 
                 * *toneInput*: is a Json variable contains *text = user input* that will be sent to 
