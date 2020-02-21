@@ -6,9 +6,9 @@ Starter for REST API workshop that show how to start working on REST APIs using 
 
 
 # Usage
-1. Click `Clone` or download button. Then, Download ZIP.
+1. Click `Clone` or `download` button. Then, Download ZIP.
 <img width="463" alt="download api starter" src="https://user-images.githubusercontent.com/42312407/74997715-e515d780-5467-11ea-8348-6103db4d43f2.png">
-2. Right `click` on the downloaded .zip folder and **click** Extract All.
+2. `Right click` on the downloaded .zip folder and `click` Extract All.
 
   
 
@@ -17,11 +17,7 @@ Starter for REST API workshop that show how to start working on REST APIs using 
 In this activity you will learn how to use the first REST API call method **GET**. 
 You will call [TheMovieDB](https://developers.themoviedb.org/3/getting-started/introduction) public API to retrieve list 
 of movies information. 
-<!--
-In [First Activity](#first-activity) you learned how to response to the user for a simple request all the requests will 
-return the same response. What if the user ask you to answer based on some input that are provided in the request? which
-means the response will be different for each request. 
--->
+
 ## PreActivity Steps
 ### 1. Sign up on TheMovieDB
 If you do not already have an account on *TheMovieDB* API, [sign up for TheMovieDB API](https://www.themoviedb.org/account/signup).
@@ -33,8 +29,8 @@ You need to get authentication key that will authorized you to request for a mov
 3. Copy the generated API under **API Key (v3 auth)**.
 
 ## Activity Steps
-1. Open the starter project in any editor.
-2. Using editor, open **home.js** file under `api/client/public/js` directory.
+1. `Open` the starter project in any editor.
+2. Using editor, `open` **home.js** file under ``api/client/public/js`` directory.
 3. Add the code of REST API call:
     1. After `$("#ready").hide();`, create empty AJAX method that will make the HTTP call and receive the movies 
     information 
