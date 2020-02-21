@@ -64,7 +64,7 @@ You need to get authentication key that will authorized you to request for a mov
             ```
          * Go to [TheMovieDB REST API documentation](https://developers.themoviedb.org/3/discover/movie-discover) to 
          know what is the exact **URL** that can answer with the list of movies.
-         URL will be something similar to the below url. **Replace <YOUR-API-KEY> with the APIKey you generated in 
+         URL will be something similar to the below url. **Replace < YOUR-API-KEY > with the APIKey you generated in 
          [PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
             ```     
                 url: "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C53",
@@ -163,7 +163,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 4. Inside *POST* listener you will create REST API call as *IBM Tone Analyzer* API 
 [documentation](https://cloud.ibm.com/apidocs/tone-analyzer?code=node) explained:
     * Copy the first code on the left and replace some values as below,
-     **Replace  <YOUR-API-KEY> with the APIKey you generated in 
+     **Replace  < YOUR-API-KEY > with the APIKey you generated in 
              [Second PreActivity Steps](#3-Create-watson-tone-analyzer-service-with-IBM-Cloud)** 
         ```
             const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
@@ -306,7 +306,7 @@ recommended movies-
 
         ```
     4. Initialize TheMovieDB REST API URL based on user mood by adding the following code before TheMovieDB call
-    **Replace <YOUR-API-KEY> in each url with the APIKey you generated in 
+    **Replace < YOUR-API-KEY > in each url with the APIKey you generated in 
     [First PreActivity Steps](#2-Get-APIKey-to-use-TheMovieDB-API)** 
         ```
              Math.max(...data.value.map(o => {largestTone = o.tone_id; o.score}));
