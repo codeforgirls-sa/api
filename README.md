@@ -255,7 +255,8 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     2. Move the old AJAx method that call *TheMovieDB REST API* inside  *function(data) { }* and replace the URL with 
-    ```url``` variable to request dynamic value. 
+    ```url``` variable to request dynamic value.
+    
         ```
             // request Tone Analyzer
             $.ajax({
