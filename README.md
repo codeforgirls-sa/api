@@ -354,9 +354,9 @@ Now you have two APIs that returns useful data, lets build the right logic using
              }
            ```   
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
-    * Once installed, click it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. https://miro.medium.com/max/82/1*BRalozwvBaJG70Dr5s8S9g.png
+    * Once installed, click it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
 
-
-5. Using **Google Chrome**, open *home.html* on **api/views** and start testing you amazing app.
+5. Using **Google Chrome**, open *home.html* on **api/views** and start testing your amazing app.
     * Make sure that your [server](5-Rerun-your-server-to-reflect-all-changes-you-made) still running and listening to port 8080
-6. Awesome job ![You did it]() 
+6. Awesome job ![giphy](https://user-images.githubusercontent.com/42312407/75002304-fb766000-5474-11ea-89e6-9e02cf15c10c.gif)
+
