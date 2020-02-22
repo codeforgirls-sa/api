@@ -236,21 +236,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
 1. Using editor, `open` **home.js** file under `api/client/public/js` directory.
     <img width="600" alt="home.js" src="https://user-images.githubusercontent.com/42312407/74997631-95371080-5467-11ea-9251-1c874ba5ffe4.png">
 
-2. Add event listener that will be triggered when a user press `submit` button 
-    1. **At the first line** in the file add the code:
-        ```javascript
-           $("#get-mood-form").submit(event => {
-               // prevent loading the page
-               event.preventDefault();
-        ```
-    2. **At the last line** in the file add the closing brackets:
-        ```javascript
-            });
-        ```
-    * *home.js* file now must be look like this:
-        <img width="600" alt="Home.js" src="https://user-images.githubusercontent.com/42312407/74997337-e72b6680-5466-11ea-91a5-934c9957cc7f.png">
-
-3. Add another AJAX method that will call Tone Analyzer REST API you just created. 
+2. Add another AJAX method that will call Tone Analyzer REST API you just created. 
 
     1. Create empty AJAX method:
         ```javascript
@@ -361,6 +347,20 @@ Now you have two APIs that returns useful data, lets build the right logic using
                          movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C27";
              }
            ```   
+3. Add event listener that will be triggered when a user press `submit` button 
+    1. **At the first line** in the file add the code:
+        ```javascript
+           $("#get-mood-form").submit(event => {
+               // prevent loading the page
+               event.preventDefault();
+        ```
+    2. **At the last line** in the file add the closing brackets:
+        ```javascript
+            });
+        ```
+    * *home.js* file now must be look like this:
+        <img width="600" alt="Home.js" src="https://user-images.githubusercontent.com/42312407/74997337-e72b6680-5466-11ea-91a5-934c9957cc7f.png">
+
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
     * Once installed, `click` it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
 
