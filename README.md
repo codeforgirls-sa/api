@@ -315,7 +315,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
                    default:
                          movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=<YOUR-API-KEY>&sort_by=release_date.desc&include_adult=false&include_video=false&page=1&primary_release_year=2019&with_genres=18%2C27";
              }
-           ```   
+                ```   
 3. Add event listener that will be triggered when a user press `submit` button 
     1. **At the first line** in the file add the code:
         ```javascript
