@@ -338,7 +338,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
          <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
 
 5. Using **Google Chrome**, `open` **home.html** on `api/views` and start testing your amazing app.
-    * Make sure that your [server](#Integrate-with-IBM-Tone-Analyzer-API) still running and listening to port 8080
+    > Make sure that your [server](#Integrate-with-IBM-Tone-Analyzer-API) still running and listening to port 8080
 # Awesome job 🎉🎉. 
 ![giphy](https://user-images.githubusercontent.com/42312407/75002304-fb766000-5474-11ea-89e6-9e02cf15c10c.gif)
 
