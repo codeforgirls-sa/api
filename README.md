@@ -265,7 +265,6 @@ Now you have two APIs that returns useful data, lets build the right logic using
                             url: movieUrl,
                             type: 'GET',
                             contentType: "application/json",
-                            json: true,
                             success: function (data) {
                                         var counter = 0;
                                         data.results.forEach(m => {
