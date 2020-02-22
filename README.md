@@ -163,7 +163,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
     ```javascript
         server.post("/api/tone-analyzer", (req, res) => { });
     ```
-3. Inside **POST** listener`, save the user's text into `query` variable that your server on your machine will receive on port 8080. 
+3. Inside **POST** listener, save the user's text into `query` variable that your server on your machine will receive on port 8080. 
     ```javascript
         let query = JSON.stringify(req.body.query) || "-1";
     ```
