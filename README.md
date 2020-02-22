@@ -249,7 +249,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     2. Move the old AJAx method that call *TheMovieDB REST API* inside  `function(data) { }` and replace the URL with 
-    ```url``` variable to request dynamic value. The file will be look like this
+    ```movieUrl``` variable to request dynamic value. The file will be look like this
         <img width="904" alt="Screen Shot 2020-02-22 at 3 38 50 AM" src="https://user-images.githubusercontent.com/42312407/75082499-f07b0880-5524-11ea-82df-a643834d3299.png">
 
     3. Add values to the rest parameters as:
