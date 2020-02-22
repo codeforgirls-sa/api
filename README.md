@@ -328,7 +328,7 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     * *home.js* file now must be look like this:
-        <img width="1268" alt="Screen Shot 2020-02-22 at 3 49 53 AM" src="https://user-images.githubusercontent.com/42312407/75082878-d3dfd000-5526-11ea-8c43-c21757f16d0e.png">
+        <img width="1248" alt="Screen Shot 2020-02-22 at 3 59 54 AM" src="https://user-images.githubusercontent.com/42312407/75083094-f58d8700-5527-11ea-867c-aecd154202c6.png">
         <img width="1218" alt="Screen Shot 2020-02-22 at 3 50 10 AM" src="https://user-images.githubusercontent.com/42312407/75082879-d5a99380-5526-11ea-8656-9a52188b7c3d.png">
 
 
