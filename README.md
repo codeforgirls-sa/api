@@ -249,39 +249,9 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     2. Move the old AJAx method that call *TheMovieDB REST API* inside  `function(data) { }` and replace the URL with 
-    ```url``` variable to request dynamic value.
-    
-        ```javascript
-            // request Tone Analyzer
-            $.ajax({
-                 url:   ,
-                 type:  ,
-                 contentType:  ,
-                 success: function(data) { 
-                            
-                            // request Movies
-                            $.ajax({
-                            url: movieUrl,
-                            type: 'GET',
-                            contentType: "application/json",
-                            json: true,
-                            success: function (data) {
-                                        var counter = 0;
-                                        data.results.forEach(m => {
-                                              if (m.poster_path !== null && counter < 8) {
-                                                  counter++;
-                                                  $(".Result").append('<div class="Movies"><p>' + m.title + '</p><img src=' +
-                                                    'https://image.tmdb.org/t/p/w1280' + m.poster_path + ' height = 200' +
-                                                    ' width = 150></div>');
-                                               }
-                                        });
-                                        $("#ready").show();
-                                        $("#loading").hide();
-                                     }
-                            });
-                          }
-            });
-        ```
+    ```url``` variable to request dynamic value. The file will be look like this
+        <img width="904" alt="Screen Shot 2020-02-22 at 3 38 50 AM" src="https://user-images.githubusercontent.com/42312407/75082499-f07b0880-5524-11ea-82df-a643834d3299.png">
+
     3. Add values to the rest parameters as:
         ```javascript
             $.ajax({
