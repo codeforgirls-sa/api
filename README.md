@@ -328,7 +328,9 @@ Now you have two APIs that returns useful data, lets build the right logic using
             });
         ```
     * *home.js* file now must be look like this:
-        <img width="600" alt="Home.js" src="https://user-images.githubusercontent.com/42312407/74997337-e72b6680-5466-11ea-91a5-934c9957cc7f.png">
+        <img width="1268" alt="Screen Shot 2020-02-22 at 3 49 53 AM" src="https://user-images.githubusercontent.com/42312407/75082878-d3dfd000-5526-11ea-8c43-c21757f16d0e.png">
+        <img width="1218" alt="Screen Shot 2020-02-22 at 3 50 10 AM" src="https://user-images.githubusercontent.com/42312407/75082879-d5a99380-5526-11ea-8656-9a52188b7c3d.png">
+
 
 4. Download [Moesif CORS Extention](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc?hl=en-US)
     * Once installed, `click` it in your browser to activate the extension. Make sure the icon’s label goes from *off* to *on*. <img width="181" alt="Screen Shot 2020-02-21 at 6 37 38 AM" src="https://user-images.githubusercontent.com/42312407/75002221-b18d7a00-5474-11ea-8043-d893fef872af.png">
