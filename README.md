@@ -161,7 +161,7 @@ If you do not already have an IBM Cloud account, [sign up for IBM Cloud](https:/
 2. After the _Routes Definitions_ comment write the following code that will listen for any request to the URL 
 -http://localhost:8080/api/tone-analyzer- and *POST* HTTP method:
     ```javascript
-        server.post("/api/tone-analyzer", (req, res) => { 
+        app.post("/api/tone-analyzer", (req, res) => { 
         
         });
     ```
