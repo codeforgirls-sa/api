@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | GIF Generator</title>
+        <link rel="stylesheet" type="text/css" href="../public/style_sheet/style.css"/>
+        <script type="text/javascript" src="../public/js/jquery-1.10.2.min.js"></script>
+    </head>
+    <body>
+        <div class="View WelcomeView">
+            <h1 class="Banner"> Enter a word to generate GIFs based on it </h1>
+            <div>
+                <img src="../public/img/giphy.gif">
+            </div>
+            <div class="TextBox">
+                <form id="get-mood-form" method="post">
+                    <textarea name="query" rows="1" cols="100" placeholder="Enter the word here..."></textarea>
+                    <input class="actions" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="View ResultView">
+            <h1 class="Banner"> GIF Generator Result </h1>
+            <div class="Result"></div>
+        </div>
+    </body>
+    <script type="text/javascript" src="../public/js/home.js"></script>
+</html>
