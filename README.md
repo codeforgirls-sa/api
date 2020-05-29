@@ -11,7 +11,7 @@ Starters and solutions for REST API workshop that shows how to start working on 
 - - - -  
 
 # Table of Content
-* [Movies Recommendation Activity](../movies-recommendation-activity-starter)
+* [Movies Recommendation Activity](/movies-recommendation-activity-starter)
 * [Gif Generator Challenge](../gif-generator-challenge-starter)
 * Solutions:
     * [Movies Recommendation Activity Solution](../solutions/movies-recommendation-activity-starter)
